@@ -8,6 +8,14 @@
                 <ul class="list-inline list-unstyled">
                     <li><span><i class="glyphicon glyphicon-calendar"></i><?php echo $post['post_created']?></span></li>
                     <li>|</li>
+                    <?php foreach ($tags as $tag):?>
+                        <a href="#">
+                            <span class="label label-info">
+                            <?=$tag['tag_name']?>
+                            </span>
+                        </a>&nbsp;</li>
+                    <?php endforeach?>
+                    <li>|</li>
                     <span><i class="glyphicon glyphicon-comment"></i> ? comments</span>
                 </ul>
             </div>
